@@ -21,4 +21,5 @@ const migrateDb = async () => {
         console.log('🔴 Error Migrating Client from supabase/db.ts')
     }
 }
+migrateDb()
 export default db
