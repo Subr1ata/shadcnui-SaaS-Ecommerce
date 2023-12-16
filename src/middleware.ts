@@ -16,7 +16,7 @@ export async function middleware(req: NextRequest) {
         return NextResponse.redirect(new URL(`/signup?error_description=${req.nextUrl.searchParams.get('error_description')}`, req.url))
     }
 
-    if (['/login', 'signup'].includes(req.nextUrl.pathname)) {
+    if (['/login', '/signup'].includes(req.nextUrl.pathname)) {
         if (session) {
             return NextResponse.redirect(new URL('/dashboard', req.url))
         }
